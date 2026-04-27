@@ -195,7 +195,7 @@
             const block_2 = {
                 type: jsPsychHtmlKeyboardResponse,
                 choices: [" "],
-                stimulus: `<p>Now you will see a series of pictures instead of words.<br/><br/> Use the D & K keys to decide whether you think each picture goes best with the Category 1 words or the Category 2 words. <br/><br/>You will not receive feedback on these trials, as there is no right answer. You do NOT need to evenly split the pictures across the two categories (i.e., you do not need to split them 50/50).</p>`
+                stimulus: `<p>Now you will see a series of pictures instead of words.<br/><br/> Use the D & K keys to decide whether you think each picture goes best with the Category 1 words or the Category 2 words. <br/><br/>You will not receive feedback on these trials, as there is no right answer. <br/><br/>You do NOT need to evenly split the pictures across the two categories (i.e., you do not need to split them 50/50). <br/><br/><br/>Press the <b>space bar</b> when you are ready to start.</p>`
             }
             instructions.push(block_2)
 
@@ -208,7 +208,9 @@
 
                             <br/><br/>For each image, decide whether this image should be grouped with the Category 1 or Category 2 words. You will not receive feedback.
 
-                            <br/><br/>You will see a series of 10 words followed by 6 images. This pattern will alternate for another 90 trials.</p>`
+                            <br/><br/>You will see a series of 10 words followed by 6 images. This pattern will alternate for another 90 trials.
+
+                            <br/><br/><br/>Press the <b>space bar</b> when you are ready to start.</p>`
             }
 
             instructions.push(block_3)
@@ -262,8 +264,8 @@
                 trial_duration: 3000,
                 left_category_key: 'd',
                 right_category_key: 'k',
-                left_category_label: ['Category Words 1'],
-                right_category_label: ['Category Words 2'],
+                left_category_label: ['Category 1 words'],
+                right_category_label: ['Category 2 words'],
                 response_ends_trial: true,
                 data:{
                     trial:jsPsych.timelineVariable('trial'),
