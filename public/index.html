@@ -173,7 +173,7 @@
             const block_start = {
                 type: jsPsychHtmlKeyboardResponse,
                 choices: [" "],
-                stimulus: "<p>In this study you will complete an Implicit Association Test (IAT) in which you will be asked to sort words and pictures into groups as fast as you can.<br/><br/> You will sort words into categories that don’t have names in English - we will just call them ‘Category 1 Words’ and ‘Category 2 Words’. <br/><br/>You will start by practicing sorting words into Categories 1 and 2 to learn which words go in which category. <br/><br/><br/><br/>" +
+                stimulus: "<p>In this study you will be asked to sort words and pictures into groups as fast as you can.<br/><br/> You will sort words into categories that don’t have names in English - we will just call them ‘Category 1 Words’ and ‘Category 2 Words’. <br/><br/>You will start by practicing sorting words into Categories 1 and 2 to learn which words go in which category. <br/><br/><br/><br/>" +
                     "Press the <b>space bar</b> when you are ready to start.</p>"
             };
 
@@ -256,7 +256,7 @@
                 type: jsPsychIatHtml,
                 stim_key_association: 'left',
                 html_when_wrong: '<span style="color: red; font-size: 80px">X</span>',
-                bottom_instructions: '<p>If you press the wrong key, a red X will appear. Press the correct key to continue</p>',
+                bottom_instructions: '',
                 stimulus: jsPsych.timelineVariable('stimulus'),
                 stimulus_duration: 1000,
                 force_correct_key_press: false,
@@ -806,7 +806,8 @@
                 choices:'NO_KEYS',
                 on_start: function (data) {
                     setTimeout(()=>{
-                        window.location = `https://rit.az1.qualtrics.com/jfe/form/SV_0DkQMT9M3jFY16e?PROLIFIC_PID=${worker_id}&STUDY_ID=${study_id}&SESSION_ID=${session_id}`
+                        window.location = `https://app.prolific.com/submissions/complete?cc=CLL8IJGA`
+                        // window.location = `https://app.prolific.com/submissions/complete?cc=CLL8IJGA?PROLIFIC_PID=${worker_id}&STUDY_ID=${study_id}&SESSION_ID=${session_id}`
                     }, 10000)
                 }
             }

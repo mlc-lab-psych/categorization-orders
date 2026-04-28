@@ -215,10 +215,7 @@ app.get('/get-data', (req, res) => {
             for (const block in category_display) {
                 category_display[block][0].sort((a, b) => a.length - b.length); // sort left
                 category_display[block][1].sort((a, b) => a.length - b.length); // sort right
-                // console.log(category_display)
-
             }
-            console.log(category_display)
         }).then((dataset) =>{
             res.status(200).json({
                 test_stimuli: test_stimuli,
